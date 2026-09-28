@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: 'Beautiful People';
+  src: url('./assets/font/AtelionDemoRegular-R9aoE.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Heritage Legacy';
+  src: url('./assets/font/TheHeritageLegacyFancyLogo-xR2r8.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Night Shift';
+  src: url('./assets/font/RochelaDemoRegular-xRE9r.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

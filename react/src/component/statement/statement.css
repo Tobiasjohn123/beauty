@@ -1,0 +1,129 @@
+/* statement.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+.statement,
+.statement * {
+  box-sizing: border-box;
+}
+
+.statement {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 4rem;
+  text-align: center;
+}
+
+.statement__heading {
+  max-width: 1100px;
+  font-family: 'Night Shift', 'Inter', sans-serif;
+  font-weight: normal;
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+  -webkit-text-stroke: 1.4px #1a1a1a;
+  text-stroke: 1.4px #1a1a1a;
+}
+
+.statement__line {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.statement__line-inner {
+  display: inline-block;
+}
+
+/* The tag container starts at zero width and grows — this is what physically
+   pushes the surrounding sentence apart, since it sits inline in the text flow */
+.statement__tag {
+  display: inline-block;
+  overflow: hidden;
+  width: 0;
+  vertical-align: middle;
+  will-change: width;
+}
+
+.statement__tag-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0 0.5rem;
+  white-space: nowrap;
+  transform: translateY(-0.35em);
+}
+
+.statement__tag-text {
+  font-family: 'Heritage Legacy', 'Inter', sans-serif;
+  font-size: clamp(0.75rem, 1.6vw, 1rem);
+  font-weight: normal;
+  letter-spacing: 0.06em;
+  color: rgba(26, 26, 26, 0.55);
+}
+
+.statement__bracket {
+  width: clamp(12px, 1.6vw, 16px);
+  height: clamp(12px, 1.6vw, 16px);
+  color: rgba(26, 26, 26, 0.35);
+  flex-shrink: 0;
+}
+
+.statement__desc {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.85rem, 1.6vw, 0.95rem);
+  line-height: 1.65;
+  color: rgba(26, 26, 26, 0.6);
+  max-width: 480px;
+  margin: 0 0 1.25rem;
+}
+
+.statement__link {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.85rem, 1.6vw, 0.95rem);
+  font-weight: 600;
+  color: #1a1a1a;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 1024px) {
+  .statement {
+    padding: 4.5rem 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .statement {
+    padding: 4rem 1.75rem;
+  }
+
+  .statement__heading {
+    margin-bottom: 1.75rem;
+    -webkit-text-stroke: 1px #1a1a1a;
+  }
+}
+
+@media (max-width: 480px) {
+  .statement {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .statement__heading {
+    -webkit-text-stroke: 0.7px #1a1a1a;
+  }
+
+  .statement__tag-text {
+    font-size: 0.65rem;
+  }
+}
